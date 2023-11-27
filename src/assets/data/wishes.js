@@ -46,5 +46,11 @@ export const wishes = [
     {
         from: `@Faith (sis)`,
         wish: `<b>Prince</b>I wish all the blessings from the Almighty.Keep loving your family and friends and May you prosper in everything you do.`
+    },
+    {
+        from: `@Pro_P`,
+        wish: `Hey <b>Celia</b>! 🎉🥳Another trip around the sun! 🌞⭐ Wishing you a day as awesome as you are! 🎂🎈 May your year ahead be filled with joy, success, and epic moments! 🚀🎁Happy Birthday! 🥳🎉 #HappyBirthdayCelia </br></br>
+        <b>Prince</b> 🎉🥳 Happy Birthday! 🎂🎈 Wishing you a day filled with joy, laughter, and all the things that make you smile! 🎁💖 Enjoy your special day to the fullest! 🥳🎉  #CelebratePrince
+        `
     }
 ]
