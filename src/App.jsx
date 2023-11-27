@@ -63,9 +63,9 @@ function App() {
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 1 }}
       >
-        <div className="absolute animate-bounce left-[10rem] top-[4rem] border p-4 rounded-xl shadow-xl border-pink-500">
+        {/* <div className="absolute animate-bounce left-[10rem] top-[4rem] border p-4 rounded-xl shadow-xl border-pink-500">
           <button onClick={saveAsPNG}>Click me</button>
-        </div>
+        </div> */}
         <div className='py-4'>
           
           <div className='flex justify-center pb-12 gap-12'>
