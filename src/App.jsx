@@ -35,14 +35,10 @@ function App() {
 
 
   const saveAsPNG = ()=>{
-    if(containerRef.current){
-     
-      html2canvas(containerRef.current).then((canvas)=>{
-        const dataUrl = canvas.toDataURL('image/png')
-        saveAs(dataUrl, 'wishes.png')
-      })
-     
-    }
+    window.print({
+      background: true,
+      title: 'Happy Birthday'
+    })
   }
 
   setTimeout(()=>{
@@ -53,7 +49,7 @@ function App() {
 
   return (
 
-    <div className='w-screen h-screen text-center bg-black  text-white relative overflow-y-scroll  custom-cursor'
+    <div ref={containerRef} onClick={saveAsPNG} className='w-screen h-screen text-center bg-black  text-white relative overflow-y-scroll  custom-cursor'
     //  style={{ background: `url(/bg.svg)` }}
      >
         <audio src="/club.mp3" autoPlay >
@@ -67,6 +63,9 @@ function App() {
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 1 }}
       >
+        <div className="absolute animate-bounce left-[10rem] top-[4rem] border p-4 rounded-xl shadow-xl border-pink-500">
+          <button onClick={saveAsPNG}>Click me</button>
+        </div>
         <div className='py-4'>
           
           <div className='flex justify-center pb-12 gap-12'>

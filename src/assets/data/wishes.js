@@ -29,6 +29,22 @@ export const wishes = [
     {
         from: `@Brother Bill`,
         wish: `wish: May you grow up under God's fear, which will help you get charming from people, wisdom, and success in all you put your hands on. Much love🥰🎉💞 utubebe twacu`
+    },
+
+    {
+        from:`@Liana`,
+        wish: `Wishing you a happiest bd. may you age with grace More love, More blessings and more money💖. 
+        @<b>Celiaa</b>
+         .This comes to wish u  a happiest bd n grow to glow 💞🥳 
+        @<b>Prince</b>`
+    },
+    {
+        from: `@Faith (sis)`,
+        wish: `<b>Celia</b>I wish you to keep that smiling face of yours.Keep the good heart and May God continue blessing you.
+        I hope you keep the love for your family that you have.`
+    },
+    {
+        from: `@Faith (sis)`,
+        wish: `<b>Prince</b>I wish all the blessings from the Almighty.Keep loving your family and friends and May you prosper in everything you do.`
     }
-    
 ]
