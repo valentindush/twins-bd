@@ -39,7 +39,7 @@ function App() {
         <audio src="/club.mp3" autoPlay >
         
         </audio>
-      <Confetti numberOfPieces={500} width={width} height={height * 4} />
+      <Confetti numberOfPieces={500} width={width} height={height * 3} />
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}
@@ -83,8 +83,11 @@ function App() {
                 .typeString("<b>--@Dush</b>")
                 .typeString("<br/>")
                 .typeString("<br/>")
-                .typeString("Happy Birthday Ghislain 🎉, may you grow in God's grace and may He bestow you His favor on this day. Enjoy your day bro ! Happy Birthday again. ")
-                .typeString("<b> --@Bella_Ariane</b>")
+                .typeString(`On your special day , <b>Celia</b> and <b>Prince</b> 🧑‍🤝‍🧑, may the world be as bright and joyful as the smiles you bring.
+                Here's to another year of shared moments, laughter that echoes, and the warmth of family bonds.
+                Mbifurije kuba munzu y' uwiteka the rest of your life. 🙏Zaburi 27:4 🙏 More years, more blessings
+                Happy Birthday to my amazing twins! Always remember that your special mother Loves you  a lot 🎊🎁🎂 `)
+                .typeString("<b> --@Mummy Benie</b>")
                 .typeString("<br/>")
                 .typeString("<br/>")
                 .typeString("I wish you a happy birthday. May God watch over your steps and may u be the ever warm and welcoming person that u are.")
