@@ -4,11 +4,17 @@ import { motion } from "framer-motion"
 import useWindowSize from 'react-use/lib/useWindowSize'
 import { wishes } from './assets/data/wishes'
 import { useState } from 'react'
+import { useRef } from 'react'
+import { data } from 'autoprefixer'
+import html2canvas from 'html2canvas'
+import {saveAs} from 'file-saver'
 
 function App() {
   const { width, height } = useWindowSize()
 
   const [visible, setVisible] = useState(false)
+
+  const containerRef = useRef(null)
 
   document.addEventListener('mousemove', (e) => {
     const rotatingWishes = document.querySelectorAll('.rotating-wish');
@@ -27,9 +33,23 @@ function App() {
 
   });
 
+
+  const saveAsPNG = ()=>{
+    if(containerRef.current){
+     
+      html2canvas(containerRef.current).then((canvas)=>{
+        const dataUrl = canvas.toDataURL('image/png')
+        saveAs(dataUrl, 'wishes.png')
+      })
+     
+    }
+  }
+
   setTimeout(()=>{
     setVisible(true)
   }, 33000)
+
+
 
   return (
 
@@ -88,16 +108,7 @@ function App() {
                 Mbifurije kuba munzu y' uwiteka the rest of your life. 🙏Zaburi 27:4 🙏 More years, more blessings
                 Happy Birthday to my amazing twins! Always remember that your special mother Loves you  a lot 🎊🎁🎂 `)
                 .typeString("<b> --@Mummy Benie</b>")
-                .typeString("<br/>")
-                .typeString("<br/>")
-                .typeString("I wish you a happy birthday. May God watch over your steps and may u be the ever warm and welcoming person that u are.")
-                .typeString("<b> --@Sandra</b>")
-                .typeString("<br/>")
-                .typeString("<br/>")
-                .typeString("Happy Birthday broskie🎂🎂 and enjoy to the fullest🍾🍾🧐")
-                .typeString("<b> --@D_Regis</b>")
-                .typeString("<br/>")
-                .typeString("<br/>")
+      
                 .callFunction(() => {})
                 .start();
           }}
@@ -111,11 +122,11 @@ function App() {
       <img src="/ballons2.png" alt="" className='w-36 fixed top-16 right-16 mbfth' />
       <img src="/bouquet.webp" alt="" className='w-64 fixed bottom-0 right-10 mbfth ' />
 
-      <div className={`wishes transition-all duration-200 ${visible?"grid":"hidden"} grid-flow-row md:grid-cols-2 grid-cols-1 gap-4 px-24 mt-12 pb-12`}>
+      <div  className={`wishes transition-all duration-200 ${visible?"grid":"hidden"} grid-flow-row md:grid-cols-2 grid-cols-1 gap-4 px-24 mt-12 pb-12`}>
         {wishes.map((wish, index) => (
-          <div key={index} className={`wishDiv shadow-md bg-white/10 rounded-xl backdrop-blur-lg p-2 border border-white/10 h-auto`}>
+          <div key={index} ref={containerRef} onClick={saveAsPNG} className={`wishDiv shadow-md bg-black/20 rounded-bl-[30px] rounded-tr-[30px] pt-4 rounded-tl-lg rounded-br-lg backdrop-blur-lg p-2 border border-white/30 h-auto`}>
             <div className="">
-              <span>"{wish.wish}"</span>
+              <span dangerouslySetInnerHTML={{__html: `"${wish.wish}"`}}></span>
             </div>
             <div className="mt-4">
               <span className='text-lg font-bold'>{wish.from}</span>
